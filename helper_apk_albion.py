@@ -58,6 +58,6 @@ if(len(items)==16):
                         if(object["@shopcategory"]==category["@id"] and object["@shopsubcategory1"]==subcategory["@id"]):
                             items_of_category_subcategory.append(object)
             with open(new_dir+"/"+category["@id"]+"/"+subcategory["@id"]+"/"+subcategory["@id"]+'.json', 'w+') as json_file:
-                json.dump(items, json_file)
+                json.dump(items_of_category_subcategory, json_file)
 else:
     print("Cambiaron algo chequear");
